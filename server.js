@@ -43,6 +43,9 @@ fs.readFile("input.txt", function(err, input) {
               ArrayThirdMode.push(ArrayInput[e]);
             }
           }
+          if (Math.abs(InputString.length - PatternsString.length) == 1) {
+            ArrayThirdMode.push(ArrayInput[e]);
+          }
         }
       }
     }
