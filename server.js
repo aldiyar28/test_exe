@@ -33,9 +33,22 @@ fs.readFile("input.txt", function(err, input) {
 
     for (var e = 0; e < ArrayInput.length; e++) {
       for (var f = 0; f < ArrayPatterns.length; f++) {
-        if (ArrayPatterns[f].includes(ArrayInput[e])) {
-          ArrayThirdMode.push(ArrayInput[e]);        
+        var ArrayInStrings = ArrayInput[e].toString().split(' ');
+        var ArrayPatStrings = ArrayPatterns[f].toString().split(' ');
+        var h=0;
+        for(g=0; g<ArrayInStrings.length; g++){
+          if (!ArrayInStrings[g].includes(ArrayPatStrings[g])) {
+            h = h+1;
+          }
         }
+        if (h>1){
+          h=0;
+        }
+        else{
+          ArrayThirdMode.push(ArrayInput[e]);
+        }
+        
+        // console.log(i);
       }
     }
     console.log('Mode 3: ', ArrayThirdMode);
