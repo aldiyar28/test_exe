@@ -47,8 +47,6 @@ fs.readFile("input.txt", function(err, input) {
         else{
           ArrayThirdMode.push(ArrayInput[e]);
         }
-        
-        // console.log(i);
       }
     }
     console.log('Mode 3: ', ArrayThirdMode);
